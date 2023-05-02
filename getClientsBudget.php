@@ -33,7 +33,7 @@ function getClients() {
         [
             'id' => 1,
             'name' => 'intrdev',
-            'api' => '23bc075b710da43f0ffb50ff9e889aed'
+            'api' => 'key'
         ],
         [
             'id' => 2,
