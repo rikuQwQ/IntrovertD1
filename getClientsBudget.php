@@ -84,7 +84,7 @@ function getBudgetForClients($dateFrom, $dateTo){
     $table = "<table><thead><tr><th>ID клиента</th><th>Имя клиента</th><th>Сумма успешных сделок за период</th></tr></thead>";
     foreach($clients as $client){
         $api_key = $client['api'];
-        $budget = getBudgetFromAllSuccesfullLeads($api_key, $dateFrom, $dateTo);
+        $budget = getBudgetFromAllSuccessfullLeads($api_key, $dateFrom, $dateTo);
         if(is_numeric($budget)){
             $totalBudget = $totalBudget + $budget;
         }
