@@ -60,7 +60,7 @@ function getBudgetFromAllSuccessfullLeads($api_key, $dateFrom, $dateTo){
         $result = $api->lead->getAll($crm_user_id, $status, $id, $ifmodif, $count, $offset); // делаем первый запрос на $count количество записей
         while($result['count'] == $count){ //проверяем, есть ли еще записи
             foreach($result['result'] as $lead){ //запускаем цикл foreach для каждой сделки в ответе на запрос
-                if($lead['date_create'] >= $dateFrom && $lead['date_closed'] <= $dateTo){ // проверяем даты сделки 
+                if($lead['date_closed'] >= $dateFrom && $lead['date_closed'] <= $dateTo){ // проверяем даты сделки 
                     $budgetSum = $budgetSum + $lead['price']; //прибавляем к бюджету
                 }
             }
