@@ -21,7 +21,7 @@ else{
 }
 
 $dateFrom = strtotime($dateFrom);
-$dateTo = strtotime($dateFrom);
+$dateTo = strtotime($dateTo);
 
 if($dateFrom > $dateTo){
     echo " \n";
